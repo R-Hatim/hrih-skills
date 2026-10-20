@@ -1,0 +1,127 @@
+{
+  "created": "2026-10-20",
+  "cutoff": "2019-12-31",
+  "selection_notes": "Goal: real small-business copy, not chosen for quality and not memorable/famous. FRAME 1 (email, web, post, product-1): a deterministic walk of the Wayback CDX index of Mailchimp hosted campaign pages, https://web.archive.org/cdx/search/cdx?url=mailchi.mp/*&output=json&limit=400&to=2019&collapse=urlkey (200 text/html, captured 2017-2019). Rows are sorted by urlkey, i.e. by random hex campaign IDs, so the order is effectively random. Every row was screened in that order (downloads kept in raw/_cand and raw/_screen); skipped: non-business senders (nonprofits, churches, schools, associations, political groups, individuals, government projects), non-English emails, signup forms, and digests of third-party news (Netplus Marketing's 'Digital Bites', ConsenSys, Trivium China). EMAIL = the first three company emails about the sender's own business with a 120-400-word run of body copy: Greenco, Argo Bookshop, Oke USA/Equal Exchange (Natures Goodness store skipped: mostly link lists). WEB = the business senders met in the same walk, in order and not used elsewhere, whose homepage (latest real 200 capture <= 2019-12-31) has a hero + feature/benefit run of 120-400 words: Natures Goodness (homepage mostly partner CBD-brand copy, skipped), Netplus (post-merger homepage of case-study titles, skipped), Trivium China (web-1), Sunday Best Quiltworks (fragments/navigation, skipped), Tiny Type Museum (a single product, not SaaS/agency/local business; used as product), Swine Management Services (no archived site), Cosmic Smile Dental (web-2), Little Red Kitchen Bake Shop (mostly product grid), Beechwood Hotel (only run ends in a VisitEngland quote plus CMS-truncated teasers). web-3 was not filled within the time box. POST = same walk order; the newest post linked from the company's last-2019 homepage/blog index that has an archived capture and a 150-400-word body: Netplus Marketing (post-1), Sunday Best Quiltworks (post-2); Beechwood Hotel posts were 50-60 words; later walk businesses had no archived blog. post-3 not filled within the time box. PRODUCT = same walk order; the first product featured on the shop's last-2019 homepage with an archived page and a 100-300-word description: Sunday Best Quiltworks '7 Dancing Sisters' (84 words, skipped), Tiny Type Museum (product-1), Little Red Kitchen 'Elvis Cookie Pie' (40 words, skipped). Few walk senders run online shops, so FRAME 2 was used for the rest: the CDX prefix listing https://web.archive.org/cdx/search/cdx?url=etsy.com/listing/58&matchType=prefix&limit=400&from=2018&to=2019&collapse=urlkey taken in order, keeping English listings by sellers in English-speaking countries with a 100-300-word description: 580000111 Fandancyshop (product-2), 580000176 (snapshot could not be retrieved, skipped), 580000423 WeeMagicMarket (product-3). EXCERPT RULE: one contiguous run starting at the top of the body/hero/description and ending at the last complete section, paragraph or sentence that keeps it within the length limit; it stops before quoted third-party copy (publisher blurb, assessor quote, curated news); post excerpts are the body without title/byline. TEXT: verbatim output of tools/fetch_controls.py (html.parser; drops script/style/noscript/svg/nav/footer/button/iframe/select, hidden elements and cookie-banner elements; one block element per line; whitespace collapsed; zero-width characters removed); no edits or typo fixes. Anchors are the first/last ~8 words; matching treats any whitespace (including line breaks) between words as equal. All snapshots are 2018-2019 captures and the copy is dated 2018-2019 where a date is shown. All companies are small or medium (Equal Exchange is a mid-size worker co-op); none are famous brands or famous ads.",
+  "items": [
+    {
+      "id": "web-1",
+      "type": "web",
+      "company": "Trivium China",
+      "original_url": "https://triviumchina.com/",
+      "wayback_url": "https://web.archive.org/web/20191209124325id_/https://triviumchina.com/",
+      "timestamp": "20191209124325",
+      "anchor_start": "Trivium is a team of strategic advisors focused",
+      "anchor_end": "broader implications for companies doing business in China.",
+      "words": 169,
+      "sha256": "85e001546a6ecc1e808383a8763c2b4f84a80cf4dff9219f5d7b39c544b4c0da"
+    },
+    {
+      "id": "web-2",
+      "type": "web",
+      "company": "Cosmic Smile Dental (Neutral Bay, Sydney)",
+      "original_url": "https://cosmicsmile.com.au/",
+      "wayback_url": "https://web.archive.org/web/20191210223921id_/https://cosmicsmile.com.au/",
+      "timestamp": "20191210223921",
+      "anchor_start": "We create beautiful, healthy teeth so you can",
+      "anchor_end": "offer additional services, like Snap-on Smile and Invisalign.",
+      "words": 326,
+      "sha256": "a7af4fd76488adf2c2f9d7a0e89323100dbb9a21d0ca5aaaf0d96a84f80717a4"
+    },
+    {
+      "id": "email-1",
+      "type": "email",
+      "company": "Greenco (Burundi coffee producer)",
+      "original_url": "https://mailchi.mp/0008f0e69e5a/greenco-august-newsletter-2018",
+      "wayback_url": "https://web.archive.org/web/20190904004558id_/https://mailchi.mp/0008f0e69e5a/greenco-august-newsletter-2018",
+      "timestamp": "20190904004558",
+      "anchor_start": "3rd Times the charm On the 2nd of",
+      "anchor_end": "just how proud we are of this achievement.",
+      "words": 293,
+      "sha256": "e8d5be414823d2817575f260c08c6cfe4e3bc5183c1cc9a79ec52806b862fb6c"
+    },
+    {
+      "id": "email-2",
+      "type": "email",
+      "company": "Argo Bookshop (Montreal)",
+      "original_url": "https://mailchi.mp/0041fe5111ad/argo-bookshop-monthly-newsletter-may-2019",
+      "wayback_url": "https://web.archive.org/web/20190514024724id_/https://mailchi.mp/0041fe5111ad/argo-bookshop-monthly-newsletter-may-2019",
+      "timestamp": "20190514024724",
+      "anchor_start": "Argo May Events Dear friends of the Argo,",
+      "anchor_end": "of Behold Things Beautiful and The Other Oscar.",
+      "words": 211,
+      "sha256": "9c8c252e466cc899c90c5a3c9e4f28a1403b7ed950561acc84809e64f0c316ab"
+    },
+    {
+      "id": "email-3",
+      "type": "email",
+      "company": "Oke USA / Equal Exchange (fair-trade bananas)",
+      "original_url": "https://mailchi.mp/006080f05da0/gearing-up-for-banana-month-2950349",
+      "wayback_url": "https://web.archive.org/web/20190805144147id_/https://mailchi.mp/006080f05da0/gearing-up-for-banana-month-2950349",
+      "timestamp": "20190805144147",
+      "anchor_start": "Every March, Equal Exchange celebrates a month of",
+      "anchor_end": "Guac. St. Peter Food Co-op, St. Peter, MN.",
+      "words": 259,
+      "sha256": "23add678696f60cf066b238a90cf21ffb3d287806587fcdc2ccab71e95c0e429"
+    },
+    {
+      "id": "post-1",
+      "type": "post",
+      "company": "Netplus Marketing (Philadelphia agency)",
+      "original_url": "https://netplus.agency/sharing-the-love-the-second-philly-supper-club/",
+      "wayback_url": "https://web.archive.org/web/20191113171007id_/https://netplus.agency/sharing-the-love-the-second-philly-supper-club/",
+      "timestamp": "20191113171007",
+      "anchor_start": "It was almost Valentine’s Day when area Food",
+      "anchor_end": "or speaker opportunities, reach out and say hello!",
+      "words": 371,
+      "sha256": "002f5c539f97067a02cb61a417c39f23c7b13168ec7326bf8ce882a7c71c2ee6"
+    },
+    {
+      "id": "product-1",
+      "type": "product",
+      "company": "Tiny Type Museum (Aperiodical LLC, Glenn Fleishman)",
+      "original_url": "https://tinytypemuseum.com/museum.php",
+      "wayback_url": "https://web.archive.org/web/20190715175603id_/https://tinytypemuseum.com/museum.php",
+      "timestamp": "20190715175603",
+      "anchor_start": "The Tiny Type Museum & Time Capsule is",
+      "anchor_end": "slot in the top of the museum case.",
+      "words": 287,
+      "sha256": "1b061b97ecd04ec1b3260d4e2209a09b54d1c22298a4cac895ce5e7be3d5a05b"
+    },
+    {
+      "id": "product-2",
+      "type": "product",
+      "company": "Fandancyshop (Etsy handmade shop, Provo, Utah)",
+      "original_url": "https://www.etsy.com/listing/580000111/pokemon-dd-figures",
+      "wayback_url": "https://web.archive.org/web/20181015194822id_/https://www.etsy.com/listing/580000111/pokemon-dd-figures",
+      "timestamp": "20181015194822",
+      "anchor_start": "It is time to go on an adventure",
+      "anchor_end": "so there may be slight differences between copy.)",
+      "words": 142,
+      "sha256": "f3d3ab70d91738493e29d05f28f631448a50bf2d9e03f3f2d9f455831ceb6653"
+    },
+    {
+      "id": "post-2",
+      "type": "post",
+      "company": "Sunday Best Quiltworks (independent quilt shop, Georgia)",
+      "original_url": "https://sundaybestquiltworks.blogspot.com/2019/09/upcoming-lecture-by-joann-camp-october.html",
+      "wayback_url": "https://web.archive.org/web/20191015213645id_/https://sundaybestquiltworks.blogspot.com/2019/09/upcoming-lecture-by-joann-camp-october.html",
+      "timestamp": "20191015213645",
+      "anchor_start": "The Artistic Journey of a Left Brained Quilter",
+      "anchor_end": "706-569-7744 to reserve and pre-pay for your space.",
+      "words": 187,
+      "sha256": "ebcd6f69244fb56bd692aae5bde4bc2d3806ad4954fe29c59039a44685fc3021"
+    },
+    {
+      "id": "product-3",
+      "type": "product",
+      "company": "WeeMagicMarket (Etsy handmade shop, Kitchener, Canada)",
+      "original_url": "https://www.etsy.com/listing/580000423/12x16-harry-potter-hogwarts-crest-sheet?ga_order=price_asc&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery-1-44",
+      "wayback_url": "https://web.archive.org/web/20191107014356id_/https://www.etsy.com/listing/580000423/12x16-harry-potter-hogwarts-crest-sheet?ga_order=price_asc&ga_search_type=all&ga_view_type=gallery&ga_search_query=&ref=sr_gallery-1-44",
+      "timestamp": "20191107014356",
+      "anchor_start": "This canvas is 12x16 and has background made",
+      "anchor_end": "available, please contact me prior to order.",
+      "words": 145,
+      "sha256": "c30c7f2a44d4d6b10f82ec14fca65802320779c89abe9ac06100ccc415c17500"
+    }
+  ]
+}

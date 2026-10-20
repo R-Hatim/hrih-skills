@@ -7,6 +7,7 @@ A collection of [Agent Skills](https://agentskills.io): folders of instructions 
 | Skill | What it does | Needs |
 |---|---|---|
 | [design-inspiration](skills/design-inspiration/SKILL.md) | Before designing a website, landing page, email, pitch deck, social post or ad, it researches current work in curated galleries, picks the best references for the brief across varied styles and palettes, extracts their real fonts, colors and layouts, writes a design direction, then builds and checks the result against the references. | A browser tool (or WebFetch); Python 3.10+; Chrome, Chromium or Edge for screenshots |
+| [copywriter](skills/copywriter/SKILL.md) | Writes and rewrites website, email, ad, social, UX and blog copy. It starts from facts and the customer's own words, drafts, then edits in passes against an evidence-based catalog of AI-writing tells (contrast framing, "-ing" tails, reflexive triads, flat rhythm, puffery). It also humanizes AI drafts and matches a voice from a sample or a link. It never invents stats or testimonials and uses no detector-evasion tricks. | Nothing required; Python 3.8+ for its linter and page-text scripts |
 
 ## Install
 
@@ -15,6 +16,7 @@ A collection of [Agent Skills](https://agentskills.io): folders of instructions 
 ```text
 /plugin marketplace add R-Hatim/hrih-skills
 /plugin install design-inspiration@hrih-skills
+/plugin install copywriter@hrih-skills
 ```
 
 To get updates later, run `/plugin marketplace update hrih-skills`, then update the plugin from `/plugin`. You can also turn on auto-update for this marketplace in `/plugin` > Marketplaces.
@@ -28,7 +30,7 @@ npx skills add R-Hatim/hrih-skills
 ```
 
 Useful flags:
-- `--skill design-inspiration` installs one skill.
+- `--skill copywriter` installs one skill.
 - `-g` installs for your user instead of the current project.
 - `-a claude-code -a codex` targets specific agents.
 - `--copy` copies instead of symlinking, for systems without symlink support.
@@ -60,7 +62,7 @@ For a single project, use `.claude/skills/` or `.agents/skills/` inside that rep
 
 ### claude.ai and the Claude desktop app
 
-1. Download `design-inspiration.skill` from this repo's [Releases](../../releases), or build it with `python tools/package.py`, which writes to `dist/`.
+1. Download a skill file (e.g. `copywriter.skill`) from this repo's [Releases](../../releases), or build it with `python tools/package.py`, which writes to `dist/`.
 2. In Claude, turn on code execution: Settings > Capabilities.
 3. Go to Customize > Skills > **+** > Create skill > **Upload a skill**, and choose the file.
 
@@ -79,6 +81,7 @@ Contributing or building a new skill: see [AGENTS.md](AGENTS.md).
 ## Notes
 
 - `design-inspiration` browses public pages of land-book.com, supahero.io, pricingpages.design, socialproofexamples.com, navbar.gallery, ogimage.gallery, reallygoodemails.com, deck.gallery, posts.design and adfolio.design. It uses them as visual reference only, borrows patterns rather than assets, never signs in, and doesn't get around bot protection. This project isn't affiliated with any of those sites.
+- `copywriter` aims at better writing, not at fooling detectors. Its tells catalog adapts ideas from [blader/humanizer](https://github.com/blader/humanizer), [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills), [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing), [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop) and [manavmishra/ZeroSlop](https://github.com/manavmishra/ZeroSlop) (all MIT) and Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), rewritten in our own words. Sources are listed in the skill's references. `evals/copywriter/benchmark/` has a reproducible AI-detector benchmark (Binoculars plus stylometrics against pre-2020 human copy).
 
 ## License
 

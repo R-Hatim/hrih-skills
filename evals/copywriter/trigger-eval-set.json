@@ -1,0 +1,23 @@
+[
+  {"query": "can you rewrite the hero section on our homepage? it's for a dog-walking marketplace in Austin, current headline is 'Revolutionizing Pet Care For The Modern Era' and i cringe every time i see it", "should_trigger": true},
+  {"query": "write a cold email to heads of ops at mid-size logistics companies about our route-optimization API. we have one case study we can use: Brightfreight cut empty miles 18% in 3 months", "should_trigger": true},
+  {"query": "this linkedin post sounds so AI lol. make it sound like me pls: 'Excited to share that I've joined Northwind as Head of Growth! This isn't just a new role — it's a chance to shape the future of B2B payments. Grateful for the journey so far 🚀 #NewBeginnings #Growth'", "should_trigger": true},
+  {"query": "Need 3 subject line options + the body for our Black Friday email. 25% off all candles, ends Monday midnight, shop is called Wick & Wren, we're small and kind of cozy/funny", "should_trigger": true},
+  {"query": "help me write product descriptions for 4 new merino base layers (150, 200, 250 and 320 gsm) for our Shopify store, they're made in Portugal, all have flatlock seams and a thumb loop", "should_trigger": true},
+  {"query": "Our onboarding emails are from 2019 and it shows. Can you draft a 4-email onboarding sequence for Notably (AI meeting notes app)? the goal is getting people to record their first meeting within 3 days", "should_trigger": true},
+  {"query": "humanize this paragraph for my newsletter, it's too polished and robotic: 'In an ever-evolving landscape of remote work, fostering genuine connection has never been more crucial. Here's the thing: culture isn't built in meetings, it's built in moments.'", "should_trigger": true},
+  {"query": "write google search ads for our tax return service in Ljubljana (English-speaking expats), I need 15 headlines and 4 descriptions within the character limits", "should_trigger": true},
+  {"query": "can u punch up the copy on our pricing page? 3 tiers: starter free, team $15/user/mo, business $40/user/mo with SSO. it reads super flat right now, file is src/pages/pricing.tsx", "should_trigger": true},
+  {"query": "I'm writing the about page for my bakery in Maribor and I want it to sound like me. here's a blog post I wrote last year that feels right: https://example-bakery.si/blog/why-we-bake-at-4am can you match that tone", "should_trigger": true},
+  {"query": "the error messages in our app are awful ('An error has occurred. Please try again.'). can you write better ones for: card declined, session expired, file too large (max 25MB), and no internet", "should_trigger": true},
+  {"query": "translate our landing page copy in content/home.md into German. keep the meaning and structure exactly as it is, just a faithful translation", "should_trigger": false},
+  {"query": "check this email for typos and grammar only, please don't change any of the wording or tone: 'Hi Tom, thanks for you're time on the call yesterday...'", "should_trigger": false},
+  {"query": "do keyword research for 'project management software for architects' - give me search volumes, difficulty and 20 long-tail keywords in a table", "should_trigger": false},
+  {"query": "write the terms of service and privacy policy for our SaaS, we're a GDPR-covered company based in Slovenia that processes payroll data", "should_trigger": false},
+  {"query": "design the landing page for my yoga studio, I already have all the final copy in copy.md, just need it to look calm and modern in a single html file", "should_trigger": false},
+  {"query": "set up a Mailchimp automation that sends our existing welcome email 1 hour after someone signs up through the Webflow form", "should_trigger": false},
+  {"query": "one of my students submitted this essay and I think it might be AI-generated. how can I tell? what should I look for?", "should_trigger": false},
+  {"query": "summarize this 20-page market research report (attached pdf) into 5 bullet points for my boss, she only cares about pricing and churn", "should_trigger": false},
+  {"query": "write docstrings and inline comments for the functions in utils/billing.py, follow google docstring style", "should_trigger": false},
+  {"query": "write a python script that scrapes our competitors' homepages and saves their H1 headlines and meta descriptions into a CSV", "should_trigger": false}
+]

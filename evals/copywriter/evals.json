@@ -1,0 +1,59 @@
+{
+  "skill_name": "copywriter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Can you write the homepage copy for Kiln? It's booking software for independent pottery studios: students book wheel classes and workshops, members book open-studio time, and there's a firing queue so members can see when their pieces go in the kiln and get a text when they're ready to collect. Facts: about 140 studios use it, mostly in the UK and Ireland. £39/month per studio, unlimited students, 30-day free trial, no card needed for the trial. Takes card payments through Stripe and syncs with Google Calendar. Most studios come to us from a mix of spreadsheets, Instagram DMs and a paper sign-up sheet by the kiln. I (Ruth) ran a studio in Bristol for 9 years before building this. We have one testimonial we're allowed to use: \"We used to spend Sunday evenings answering DMs about class spaces. Now people just book.\" (Priya Nair, Clayhouse Leeds). I need a hero, 3-4 sections, a short FAQ and a closing CTA. Our current site sounds like every other SaaS homepage and I hate it.",
+      "expected_output": "Homepage copy organized by unit (hero with H1, subhead, CTA; 3-4 sections; FAQ; closing CTA) that says plainly what Kiln is and who it's for, uses only the supplied facts and the one real testimonial, marks missing proof as placeholders, offers headline alternatives, and keeps notes outside the copy.",
+      "files": [],
+      "assertions": [
+        "The H1 and subhead together make clear that Kiln is booking software for pottery studios (what it is and who it's for)",
+        "Price, trial and integrations are stated accurately: £39/month per studio, 30-day free trial, no card needed, Stripe, Google Calendar; no other prices or plans are invented",
+        "No invented numbers or stats: every figure in the copy (e.g. 140 studios, 9 years, £39, 30 days) comes from the prompt",
+        "The only customer quote presented as real is Priya Nair's; any further testimonials, logos or ratings are absent or clearly marked placeholders",
+        "The copy contains no contrast framing ('not just X', 'it's not X, it's Y'), 'Whether you're', ', ensuring/highlighting' tails, or stock openers/closers (check_copy.py reports no rewrite-level findings of those kinds)",
+        "Em dashes in the delivered copy (excluding the quoted testimonial) are at most 1 per 300 words",
+        "Offers 2-3 alternative headlines, each with a one-line reason",
+        "Assumptions and notes are kept outside the copy, and the copy contains no chat leftovers ('Here's', 'I hope this helps')",
+        "The copy has at most 3 inline [NEED: ...] placeholders, and no FAQ answer is only a placeholder (unanswerable questions are left out and listed in the notes)",
+        "Ruth's own story uses only what she said (ran a studio in Bristol for 9 years); no invented details of how her studio worked",
+        "Notes after the copy, excluding headline/CTA alternatives, are under about 250 words"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Next Tuesday we're shipping Xero export in Tallyo (our invoicing app for freelancers). Paid invoices now sync to Xero automatically, with the client, VAT and payment date matched; you connect once under Settings > Integrations. It's on every plan, including Free. It was the most requested feature on our roadmap board (212 votes). Can you write (1) the launch email to our ~8,000 users and (2) a LinkedIn post for my cofounder Maja announcing it? Here's a recent post of hers so you get her voice:\n\n\"Confession: I did my own books in a spreadsheet for six years. Not because I liked it. Because every tool I tried wanted me to be an accountant first. Last month a designer in Porto told me she spends Sunday nights matching payments to invoices, and I recognised the exact sigh. We're working on it. Slowly, properly, and with fewer features than you'd expect.\"",
+      "expected_output": "A launch email delivered as subject line, preview text and body with one CTA to connect Xero, plus a first-person LinkedIn post in Maja's voice, both built only from the supplied facts.",
+      "files": [],
+      "assertions": [
+        "The email is delivered as separately labelled subject line, preview text and body",
+        "The subject line is at most 50 characters and says what's new for the reader (mentions Xero)",
+        "The email states the facts accurately: paid invoices sync automatically; client, VAT and payment date are matched; connect once under Settings > Integrations; available on every plan including Free",
+        "The email has one primary call to action (connect Xero / turn it on)",
+        "Neither piece invents numbers, customers, quotes or stories beyond the prompt (212 votes, ~8,000 users and next Tuesday are the only figures available)",
+        "The LinkedIn post is first person in Maja's voice: contractions, mixed short and long sentences, plain words, and no engagement bait or wall of hashtags (at most 3 hashtags)",
+        "Neither piece uses 'We're excited/thrilled to announce' or a stock closer like 'Ready to take your invoicing to the next level?'",
+        "The email copy has no rewrite-level check_copy.py findings for contrast framing, '-ing' tails or stock phrases",
+        "The email has at most 3 [NEED: ...] placeholders, all operational (sender name, links) rather than missing product facts written as brackets"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our head of support wrote this for the blog with ChatGPT's help and it reads exactly like ChatGPT. Can you make it sound like a person wrote it? Keep every fact, don't add any. I love how Julia Evans writes, friendly and concrete, so something in that direction: https://jvns.ca/blog/good-questions/\n\n---\n\nWhy We Moved Our Support Inbox to Help Scout — And Never Looked Back\n\nIn today's fast-paced world of customer support, delivering timely, personalized assistance is more crucial than ever. At Fernwood, we've always prided ourselves on our commitment to exceptional customer experiences. However, as our customer base grew, our shared Gmail inbox simply couldn't keep up.\n\nThe challenges were real. With three support agents handling roughly 1,200 conversations per month, emails were slipping through the cracks. Two people would sometimes answer the same customer, while other messages went unanswered for days. Our average first response time had crept up to 9 hours — not the experience we wanted to deliver.\n\nThat's when we decided to make a change. In March, we migrated to Help Scout, a dedicated help desk platform designed to streamline team collaboration. The results? Nothing short of transformative.\n\nHere's what changed:\n\n- **Clear ownership:** Every conversation now has an assigned owner, ensuring nothing falls through the cracks.\n- **Saved replies:** We created 40 saved replies for our most common questions, dramatically reducing repetitive typing.\n- **Collision detection:** Agents can see when a teammate is already replying, eliminating duplicate responses.\n\nThe impact has been remarkable. Our first response time dropped from 9 hours to 2.5 hours within six weeks. Moreover, our customer satisfaction score rose from 81% to 92%.\n\nOf course, the transition wasn't without its challenges. The migration took two weeks instead of the planned three days, and we lost the history of some older threads in the process. It's important to note that careful planning is essential for any migration of this kind.\n\nUltimately, moving to Help Scout wasn't just about adopting a new tool — it was about reaffirming our dedication to the people who rely on us every day. Whether you're a small team or a growing business, investing in the right support tools can make all the difference.\n\nHave you made a similar switch? We'd love to hear about your experience in the comments below!",
+      "expected_output": "The blog post rewritten as a person would write it, in a friendly, concrete voice informed by the linked post, keeping every fact (3 agents, ~1,200 conversations/month, 9h to 2.5h in six weeks, CSAT 81% to 92%, 40 saved replies, March, two weeks vs three days, lost thread history) and adding none, followed by a short 'What changed' note.",
+      "files": [],
+      "assertions": [
+        "All facts from the draft are kept: Fernwood; shared Gmail inbox; three agents; ~1,200 conversations/month; duplicate replies and messages unanswered for days; 9-hour first response; moved to Help Scout in March; assigned owners; 40 saved replies; collision detection; 9h to 2.5h within six weeks; CSAT 81% to 92%; migration took two weeks instead of three days; lost history of some older threads",
+        "No new facts, numbers, names, quotes or anecdotes appear that aren't in the draft",
+        "The rewrite drops the draft's tells: no 'In today's fast-paced', 'Ultimately', 'wasn't just about … it was about', 'Whether you're', 'It's important to note', 'The results?', 'Moreover', or ', ensuring' tails (check_copy.py reports no rewrite-level findings)",
+        "The rewrite has at most 1 em dash",
+        "The bold-label bullets are gone (rewritten as prose or as plain, complete list items)",
+        "The honest downside (migration overran, lost thread history) is kept, without the generic 'careful planning is essential' moral",
+        "The voice link was read as text (process shows fetching https://jvns.ca/blog/good-questions/) and the rewrite is first person, plain and concrete with contractions",
+        "A short 'What changed' note is given outside the rewritten post",
+        "Stock idioms from the draft ('slipping through the cracks', 'make all the difference') are replaced by what actually happened, not kept or reworded",
+        "Notes after the post are under about 250 words"
+      ]
+    }
+  ]
+}

@@ -128,7 +128,7 @@ Many reference sites use proprietary fonts. Substitute close free ones and say s
 
 - **Stack:** follow the existing codebase's conventions. With no codebase, use whatever output the environment favors (a single self-contained HTML file, an artifact, React, and so on).
 - **Tokens first:** define the direction's tokens as CSS variables or theme config, then build sections on top of them.
-- **Real copy:** write specific copy for the user's product. Never use lorem ipsum, and never reuse the reference's copy. Testimonials, customer logos and metrics are the exception: never invent them as if real. Use clearly marked placeholders ("Customer quote here") unless the user supplied real ones.
+- **Real copy:** write specific copy for the user's product. Never use lorem ipsum, and never reuse the reference's copy. Testimonials, customer logos and metrics are the exception: never invent them as if real. Use clearly marked placeholders ("Customer quote here") unless the user supplied real ones. If the `copywriter` skill is available, use it to write the copy.
 - **Borrow patterns, not property.** Don't copy logos, illustrations, photos, copy, or one site's layout pixel for pixel, and don't hotlink their images. Someone who knows the reference should see "inspired by", not "copy of". Use user-provided assets, CSS/SVG shapes, gradients, or clearly marked placeholders.
 - **Responsive and accessible:** mobile layout, readable contrast, semantic HTML, visible focus states.
 

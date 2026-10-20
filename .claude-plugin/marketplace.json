@@ -5,14 +5,14 @@
     "email": "hello@hrih.si",
     "url": "https://github.com/R-Hatim"
   },
-  "description": "Agent Skills by Hatim Rih: design from real references, and more to come.",
+  "description": "Agent Skills by Hatim Rih: design from real references, copy that reads like a person wrote it, and more to come.",
   "plugins": [
     {
       "name": "design-inspiration",
       "description": "Researches current design galleries (land-book, supahero, pricingpages, reallygoodemails, deck.gallery and more) before designing websites, emails, decks, social posts or ads, then builds from the best references.",
       "source": "./",
       "strict": false,
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "design",
       "tags": [
         "design",
@@ -23,6 +23,25 @@
       ],
       "skills": [
         "./skills/design-inspiration"
+      ]
+    },
+    {
+      "name": "copywriter",
+      "description": "Writes and rewrites website, email, ad, social and UX copy from facts and customer language, then edits it against an evidence-based catalog of AI-writing tells. Humanizes AI drafts, matches a voice from a sample or link, and never invents stats or testimonials.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "writing",
+      "tags": [
+        "copywriting",
+        "writing",
+        "humanizer",
+        "marketing",
+        "email",
+        "landing-page"
+      ],
+      "skills": [
+        "./skills/copywriter"
       ]
     }
   ]
