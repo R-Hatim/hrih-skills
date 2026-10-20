@@ -1,0 +1,8 @@
+# Keep LF everywhere: SKILL.md frontmatter parsers and shell scripts expect it,
+# and skills get installed on macOS, Linux and Windows alike.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.webp binary
+*.skill binary

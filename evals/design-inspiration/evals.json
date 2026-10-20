@@ -1,0 +1,55 @@
+{
+  "skill_name": "design-inspiration",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Can you design a landing page for Tallyo? It's an AI bookkeeping app for freelancers and solo consultants: it auto-categorizes expenses, tracks invoices, and estimates quarterly taxes. Plans are Free, Pro ($12/mo) and Business ($29/mo). I want it to feel trustworthy but not boring-bank. Just give me a single HTML file.",
+      "expected_output": "A single self-contained, responsive HTML landing page whose visual direction is grounded in specific references found on land-book and specialist galleries (pricing/hero/social proof), with a written design direction and an Inspired-by list.",
+      "files": [],
+      "assertions": [
+        "Browsed land-book.com plus at least one specialist gallery relevant to the brief (pricingpages.design, supahero.io or socialproofexamples.com), per the process log",
+        "Opened at least two live reference websites (not just gallery thumbnails)",
+        "A written design direction names a north-star reference with its URL and gives concrete tokens (specific font names, hex colors, and sizes)",
+        "index.html is a single self-contained file that renders a complete page (desktop screenshot shows a finished layout, not broken or blank)",
+        "Pricing section shows exactly the three plans Free, Pro $12/mo and Business $29/mo",
+        "Page is responsive: contains CSS media queries and the mobile screenshot shows a single-column layout without horizontal overflow",
+        "No lorem ipsum or generic placeholder copy for product messaging",
+        "Testimonials, customer logos or usage metrics are either absent or clearly marked as placeholders, not presented as real",
+        "Final message includes an Inspired-by list with reference URLs and what was taken from each"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need a welcome email for new users of Streakly, my habit-tracking app. It should welcome them, push them to create their first habit, and mention the 3 core features (smart reminders, streak stats, friend challenges). Give me production-ready email HTML.",
+      "expected_output": "Production-ready, table-based, inline-styled email HTML (~600px) whose design is grounded in specific reallygoodemails references, with a design direction and an Inspired-by list.",
+      "files": [],
+      "assertions": [
+        "Browsed reallygoodemails.com category or search pages relevant to the brief (e.g. welcome, onboarding, app), per the process log",
+        "Studied at least two specific reference emails (detail page, screenshot or HTML source)",
+        "A written design direction names specific reference emails with URLs and gives concrete tokens (fonts, hex colors, widths)",
+        "Email HTML uses table-based layout with inline styles and a max content width of about 600px (no flexbox/grid for layout)",
+        "Email includes a prominent bulletproof-style CTA to create the first habit",
+        "Email mentions all three features: smart reminders, streak stats, friend challenges",
+        "No lorem ipsum; copy is specific to Streakly",
+        "Final message includes an Inspired-by list with reference URLs and what was taken from each"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our open-source CLI Driftwood (Postgres schema migrations, written in Rust) needs a new homepage hero and top navbar. The current one looks like a 2015 Bootstrap template. The nav needs Docs, GitHub, Changelog and Pricing (we have a hosted cloud tier). Give me the HTML/CSS for just the navbar + hero, responsive, with a proper mobile menu.",
+      "expected_output": "Responsive navbar + hero HTML/CSS for a Rust Postgres-migrations CLI, grounded in supahero and navbar.gallery references, with a mobile menu, design direction and Inspired-by list.",
+      "files": [],
+      "assertions": [
+        "Browsed supahero.io (search-index.json or site) and navbar.gallery (a relevant /style/ or /type/ page), per the process log",
+        "Compared at least 8 candidates visually, via a contact sheet or grid screenshots",
+        "Opened at least two live reference sites and extracted real tokens (fonts, sizes, colors) from them",
+        "A written design direction names a north-star reference with its URL and gives concrete tokens (font names, hex colors, sizes)",
+        "Output is only a navbar and a hero (no extra page sections), with nav links Docs, GitHub, Changelog and Pricing",
+        "Responsive with a working mobile menu: media queries plus a toggle button that exposes the links (aria-expanded or equivalent), and the mobile screenshot shows a collapsed nav",
+        "No lorem ipsum; copy is specific to Driftwood (Postgres migrations, Rust CLI)",
+        "Social proof such as GitHub star counts, download numbers or company logos is absent or clearly marked as placeholder, not presented as real",
+        "Final message includes an Inspired-by list with reference URLs and what was taken from each"
+      ]
+    }
+  ]
+}

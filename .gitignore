@@ -1,0 +1,19 @@
+# Build output (tools/package.py)
+dist/
+*.skill
+
+# Eval runs and workspaces: large, machine-specific, regenerated per iteration
+*-workspace/
+workspace/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Tool and OS clutter
+.playwright-mcp/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

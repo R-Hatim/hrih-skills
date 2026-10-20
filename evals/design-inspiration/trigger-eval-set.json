@@ -1,0 +1,22 @@
+[
+  {"query": "my saas landing page looks super generic tbh. can you redo it? it's a scheduling tool for therapists, current version is in ./site/index.html", "should_trigger": true},
+  {"query": "need a pricing page for our API product - 3 tiers plus usage-based overage. make it look legit, we're getting compared to Stripe and Twilio", "should_trigger": true},
+  {"query": "can you build me a portfolio site? I'm a motion designer based in Lisbon, mostly brand films and title sequences", "should_trigger": true},
+  {"query": "our onboarding emails look like a 2012 newsletter. we're a meal kit company (Fennel & Fig). can you make the day-1 welcome email HTML look modern", "should_trigger": true},
+  {"query": "design the og:image template for our blog posts, brand colors are #0B3D2E and #F2C14E, needs title + author + date", "should_trigger": true},
+  {"query": "we're raising a seed round next month, help me design the pitch deck for Patchwork (B2B marketplace for freelance welders)", "should_trigger": true},
+  {"query": "create a few instagram + linkedin graphics for our product hunt launch on thursday, we're a notes app called Margin", "should_trigger": true},
+  {"query": "the header nav on our docs site is a mess, 14 top-level links. redesign it, maybe a mega menu? it's next.js + tailwind", "should_trigger": true},
+  {"query": "add a testimonials section to the homepage that actually looks good. we have 6 customer quotes with photos in data/quotes.json", "should_trigger": true},
+  {"query": "build a homepage for my bakery in Montreal (Boulangerie Rive), single html file is fine, should feel warm and local", "should_trigger": true},
+  {"query": "the navbar overlaps the hero on safari iOS 18 only, z-index is 50 on the nav. can you find the bug in components/Nav.tsx", "should_trigger": false},
+  {"query": "write a python script that scrapes land-book.com fintech listings into a CSV with name, url and tags", "should_trigger": false},
+  {"query": "just write the copy for my landing page sections - hero, 3 features, FAQ. product is an AI receipt scanner. no design needed", "should_trigger": false},
+  {"query": "convert this figma export (exported/frame-12.svg + specs.md) into react components with tailwind, match it exactly", "should_trigger": false},
+  {"query": "set up a new next.js 15 project with tailwind v4 and shadcn/ui and push it to a new github repo", "should_trigger": false},
+  {"query": "our lighthouse performance score dropped to 54 after the redesign, can you figure out why and fix it", "should_trigger": false},
+  {"query": "hook up sendgrid so new users get the welcome email template (templates/welcome.html) when they sign up, using our existing node backend", "should_trigger": false},
+  {"query": "make a chart of monthly active users from analytics.csv for the investor update, bar chart is fine", "should_trigger": false},
+  {"query": "audit my site for accessibility issues (wcag 2.2 AA) and fix the color contrast failures, keep the current brand colors", "should_trigger": false},
+  {"query": "explain the difference between css grid and flexbox and when I should use each for card layouts", "should_trigger": false}
+]
