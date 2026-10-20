@@ -190,6 +190,18 @@ def blank_markdown(text):
             kinds.append("code")
             continue
         kind = "text"
+        # images: alt text and URL are not prose
+        line = re.sub(r"!\[[^\]]*\]\([^)]*\)", lambda mm: " " * len(mm.group(0)), line)
+        # tables: separator rows are blank; each row is its own unit, checked for tells but kept out of rhythm
+        if re.match(r"^\s*\|", line):
+            if re.match(r"^\s*\|?[\s:|-]+\|?\s*$", line):
+                out.append(" " * len(line))
+                kinds.append("blank")
+                continue
+            counts["table_rows"] += 1
+            out.append(line.replace("|", " "))
+            kinds.append("bullet")
+            continue
         m = re.match(r"^(\s{0,3}#{1,6}\s+)", line)
         if m:
             counts["headings"] += 1

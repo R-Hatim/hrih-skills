@@ -2,6 +2,8 @@
 
 A collection of [Agent Skills](https://agentskills.io): folders of instructions and scripts that teach AI agents to do specific jobs well. Skills use the open `SKILL.md` format, so they work in Claude Code, claude.ai, and the many other agents that support it (Codex, Cursor, GitHub Copilot, Gemini CLI, OpenCode, Amp, Goose and more).
 
+How the skills work, with before/after examples and a detector benchmark: **[hrih.si/projects/hrih-skills](https://hrih.si/projects/hrih-skills/)**.
+
 ## Skills
 
 | Skill | What it does | Needs |
