@@ -30,6 +30,7 @@ tools/package.py        builds dist/<name>.skill for claude.ai / desktop upload
   - Runnable as `python scripts/x.py` and under `python -I`.
   - They print where their outputs went.
 - **No secrets, personal paths or machine-specific values** anywhere in `skills/`.
+- **Shared files are copies.** Each skill installs on its own, so the review skills each carry `scripts/lessons.py`, `scripts/diff_facts.py` and `references/lessons.md`. Edit one copy, then copy it to the others; `tools/validate.py` fails when they drift.
 
 ## Before committing
 

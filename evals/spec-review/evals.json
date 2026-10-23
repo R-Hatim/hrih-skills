@@ -1,0 +1,35 @@
+{
+  "skill_name": "spec-review",
+  "setup": "Build the test repo first: python evals/review-loop/make_fixture.py <dir>. Each prompt runs inside that repo. Tests run with: python -m unittest discover -s tests",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "The agent says partial refunds are done on feature/partial-refunds-v2. Does it do what docs/specs/partial-refunds.md asks? I don't want to read all the code.",
+      "expected_output": "Numbered criteria from the spec with a status each. Two real problems: refunding exactly what's left is rejected (>= instead of >, so a payment can't be fully refunded through partials), and the export still only lists fully refunded payments. Both are backed by evidence (a check that ran or a surviving mutant), tests were run, and the human is pointed at specific lines.",
+      "files": ["evals/review-loop/make_fixture.py"],
+      "assertions": [
+        "It lists numbered criteria taken from the spec, including 'a refund up to exactly what's left succeeds' and 'the export shows partial refunds'",
+        "It finds that refunding exactly the remaining amount is rejected (refunds/core.py uses >= where the spec needs >)",
+        "That finding is backed by evidence from a command it ran: an acceptance check, a test, or the surviving mutant from mutate.py",
+        "It finds that the export still only includes fully refunded payments, so the export criterion is not met and nothing tests it",
+        "It ran the test suite and reports the real result",
+        "It ran mutate.py, or says why it couldn't",
+        "It didn't modify the repo's code or tests",
+        "It points the human at specific lines (refunds/core.py, refunds/export.py) rather than asking them to read the whole diff"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Can you check feature/partial-refunds against docs/specs/partial-refunds.md before I merge it?",
+      "expected_output": "Every stated criterion covered by a test that ran, nothing contradicted, the mutation pass catches every planted bug, and no false alarms. Half-even rounding in the export isn't raised as a problem (lesson L-003).",
+      "files": ["evals/review-loop/make_fixture.py"],
+      "assertions": [
+        "Every stated criterion is marked covered, each with a named test that ran",
+        "No criterion is marked contradicted",
+        "It doesn't report the export's half-even rounding as a problem",
+        "It reports at most one finding that isn't a real problem in the code",
+        "It ran the test suite and reports the real result"
+      ]
+    }
+  ]
+}
