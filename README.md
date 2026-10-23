@@ -16,6 +16,8 @@ How the skills work, with before/after examples and a detector benchmark: **[hri
 
 The three review skills share one memory, `REVIEW-LESSONS.md`: what the people on a project have taught the reviewers, in their own words, read from the base branch so a change can't rewrite its own review. Its format and rules are in [references/lessons.md](skills/review-router/references/lessons.md).
 
+Why these three exist, and what about 70 agent reviews with and without them showed: **[Who teaches the reviewer?](https://hrih.si/articles/who-teaches-the-reviewer/)**
+
 ## Install
 
 ### Claude Code (plugin marketplace)
