@@ -10,6 +10,11 @@ How the skills work, with before/after examples and a detector benchmark: **[hri
 |---|---|---|
 | [design-inspiration](skills/design-inspiration/SKILL.md) | Before designing a website, landing page, email, pitch deck, social post or ad, it researches current work in curated galleries, picks the best references for the brief across varied styles and palettes, extracts their real fonts, colors and layouts, writes a design direction, then builds and checks the result against the references. | A browser tool (or WebFetch); Python 3.10+; Chrome, Chromium or Edge for screenshots |
 | [copywriter](skills/copywriter/SKILL.md) | Writes and rewrites website, email, ad, social, UX and blog copy. It starts from facts and the customer's own words, drafts, then edits in passes against an evidence-based catalog of AI-writing tells (contrast framing, "-ing" tails, reflexive triads, flat rhythm, puffery). It also humanizes AI drafts and matches a voice from a sample or a link. It never invents stats or testimonials and uses no detector-evasion tricks. | Nothing required; Python 3.8+ for its linter and page-text scripts |
+| [review-router](skills/review-router/SKILL.md) | Decides how much human review a change needs, from the change rather than its author: a fixed floor of sensitive paths, judgement about intent, blast radius and reversibility above it, every risk paired with the check that covers it, and the three hunks a human should read first. Learns from human overrides. | git, Python 3.9+ |
+| [review-apprentice](skills/review-apprentice/SKILL.md) | Code review as teaching when an AI reviews too. The junior reviews first without seeing the AI's findings, then judges each AI finding with a reason; a senior checks those calls, and their corrections become lessons the next person reads. | git, Python 3.9+ |
+| [spec-review](skills/spec-review/SKILL.md) | Reviews a change against its spec and its evidence instead of every line: testable criteria for the human to confirm, acceptance checks written from the spec rather than the code, tests mapped to real output, a mutation pass over the changed lines, and a check for tests bent to fit the code. | git, Python 3.9+, the project's test command |
+
+The three review skills share one memory, `REVIEW-LESSONS.md`: what the people on a project have taught the reviewers, in their own words, read from the base branch so a change can't rewrite its own review. Its format and rules are in [references/lessons.md](skills/review-router/references/lessons.md).
 
 ## Install
 
@@ -19,6 +24,7 @@ How the skills work, with before/after examples and a detector benchmark: **[hri
 /plugin marketplace add R-Hatim/hrih-skills
 /plugin install design-inspiration@hrih-skills
 /plugin install copywriter@hrih-skills
+/plugin install review-loop@hrih-skills
 ```
 
 To get updates later, run `/plugin marketplace update hrih-skills`, then update the plugin from `/plugin`. You can also turn on auto-update for this marketplace in `/plugin` > Marketplaces.

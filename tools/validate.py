@@ -26,6 +26,8 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 SKILLS = ROOT / "skills"
 ALLOWED = {"name", "description", "license", "allowed-tools", "metadata", "compatibility"}
+# Files copied into several skills (each skill installs on its own); every copy must match.
+SHARED = ["scripts/lessons.py", "scripts/diff_facts.py", "references/lessons.md"]
 
 
 def check(skill: Path) -> list[str]:
@@ -97,7 +99,16 @@ def main() -> int:
         else:
             print(f"ok    {skill.name}")
     print(f"\n{len(skills) - failed}/{len(skills)} skills valid")
-    return 1 if failed else 0
+
+    drift = 0
+    for rel in SHARED:
+        copies = {p: p.read_bytes() for p in sorted(SKILLS.glob(f"*/{rel}"))}
+        if len(set(copies.values())) > 1:
+            drift += 1
+            print(f"FAIL  shared file {rel} differs between: "
+                  + ", ".join(p.parent.parent.name if p.parent.name in ('scripts', 'references') else p.name
+                              for p in copies))
+    return 1 if failed or drift else 0
 
 
 if __name__ == "__main__":

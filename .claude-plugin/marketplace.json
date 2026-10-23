@@ -5,7 +5,7 @@
     "email": "hello@hrih.si",
     "url": "https://github.com/R-Hatim"
   },
-  "description": "Agent Skills by Hatim Rih: design from real references, copy that reads like a person wrote it, and more to come.",
+  "description": "Agent Skills by Hatim Rih: design from real references, copy that reads like a person wrote it, and code review that people and agents learn from.",
   "plugins": [
     {
       "name": "design-inspiration",
@@ -42,6 +42,26 @@
       ],
       "skills": [
         "./skills/copywriter"
+      ]
+    },
+    {
+      "name": "review-loop",
+      "description": "Code review for teams where agents write most of the code: route changes by risk, review against the spec and the evidence, and turn reviews into teaching. All three share a REVIEW-LESSONS.md memory that people teach and agents read.",
+      "source": "./",
+      "strict": false,
+      "version": "0.1.0",
+      "category": "development",
+      "tags": [
+        "code-review",
+        "pull-request",
+        "testing",
+        "mentoring",
+        "agents"
+      ],
+      "skills": [
+        "./skills/review-router",
+        "./skills/review-apprentice",
+        "./skills/spec-review"
       ]
     }
   ]

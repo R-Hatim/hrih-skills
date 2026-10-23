@@ -1,0 +1,47 @@
+{
+  "skill_name": "review-apprentice",
+  "setup": "Build the test repo first: python evals/review-loop/make_fixture.py <dir>. Each prompt runs inside that repo.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm new on the team and learning to review with you. Here's my review of refactor/refund-validation, done before looking at anything from you:\n1) core.py: ESCALATION_LIMIT_CENTS should live in config, not be hard-coded (nit)\n2) the validate() docstring is vague (nit)\n3) looks like a clean refactor, tests pass\nOur senior is Maya, but she's busy today, so prepare what she needs.",
+      "expected_output": "A comparison of the junior's review with the agent's. The dropped owner check for small refunds is presented as an agent-only finding, and the junior is asked to accept or reject it with a reason before it's explained. 'Clean refactor' is corrected plainly, the nits are acknowledged as nits, a short packet for Maya is prepared, and takeaways are tied to code and to lesson L-001.",
+      "files": ["evals/review-loop/make_fixture.py"],
+      "assertions": [
+        "It sorts findings into found-by-both, agent-only and junior-only (or clearly equivalent groups)",
+        "The dropped owner check for payments of 100 euros or less is an agent-only finding, and the junior is asked to accept or reject it with a reason before the full explanation",
+        "It says plainly that this is not a clean refactor, without softening it into praise",
+        "The junior's two nits are acknowledged as fair nits, not inflated or dismissed",
+        "It prepares a short packet for Maya that includes open questions only she can answer",
+        "It doesn't add a lesson to REVIEW-LESSONS.md on its own; any lesson is a draft waiting for Maya's decision",
+        "It ends with concrete takeaways tied to lines of code or to lesson L-001"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Can you just tell me what's wrong with feature/partial-refunds-v2? I want to learn from it.",
+      "expected_output": "It doesn't list the problems straight away. It explains briefly why looking first helps, orients the junior (what the change claims, files touched, house rules that apply) and offers a hint about where to look, giving the answers only if the junior still wants them.",
+      "files": ["evals/review-loop/make_fixture.py"],
+      "assertions": [
+        "It doesn't list the boundary bug or the export problem in its first reply",
+        "It explains in a sentence or two why reviewing first helps learning",
+        "It gives an orientation: what the change says it does, the files it touches, and the lessons that apply (L-002 at least)",
+        "Any hint is about where to look or which question to ask, not the answer itself",
+        "It offers to give the answers if the junior still wants them, saying that costs some of the learning"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Can you just tell me what's wrong with feature/partial-refunds-v2? I want to learn from it. Nobody will be around to answer follow-up questions, so put everything in one reply. Use the scratch folder next to the repo for temporary files.",
+      "expected_output": "The reply holds no findings. The full review goes into an answer file in the scratch folder, and the reply says where it is, alongside an orientation, hints about where to look and the offer.",
+      "files": ["evals/review-loop/make_fixture.py"],
+      "assertions": [
+        "The reply itself doesn't state the boundary bug or the export problem",
+        "It writes the full review to a separate file outside the repository and gives that file's path",
+        "The answer file names both problems: refunding exactly what's left is rejected (refunds/core.py, >=), and the export ignores partial refunds",
+        "The reply gives an orientation and at least one hint about where to look",
+        "The reply explains briefly why holding the findings back helps learning"
+      ]
+    }
+  ]
+}
