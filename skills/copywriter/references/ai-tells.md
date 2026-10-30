@@ -19,7 +19,7 @@ Use this in the editing passes, after a draft exists. Don't read it as a list of
 ## 1. How to use this catalog
 
 - **Tells cluster.** One list of three or one dash proves nothing; humans use every device here. What readers notice is the same move repeated, or several moves stacked in one paragraph. Act on density and repetition.
-- **Structure beats vocabulary.** Word habits change with every model generation: "delve" was everywhere in 2024 and is rare now. The structural habits (contrast framing, "-ing" tails, reflexive triads, flat rhythm, generic claims) have stayed stable across models and vendors. Spend your effort there.
+- **Structure beats vocabulary.** Word habits change with every model generation: "delve" was everywhere in 2024 and had fallen sharply in ChatGPT by mid-2025. The structural habits (contrast framing, "-ing" tails, reflexive triads, flat rhythm, generic claims) have stayed stable across models and vendors. Spend your effort there.
 - **Fix from the facts.** The fix for a tell is almost never a synonym. Ask what the sentence is trying to claim, find the fact that would make a reader believe it, and write that. If there is no fact, cut the sentence or mark `[NEED: …]`.
 - **Marketing may sell.** Encyclopedic style guides treat all promotional language as a fault. Copy is allowed to persuade; the target is *empty* persuasion (adjectives standing in for facts), not persuasion itself.
 - **Severity levels used below:**
@@ -34,7 +34,7 @@ Use this in the editing passes, after a draft exists. Don't read it as a list of
 
 ### Contrast framing: **Rewrite**
 "It's not X, it's Y." "Not just X, but Y." "This isn't about X. It's about Y." "Less X, more Y." "X, not Y" as a headline formula.
-- *Why it reads as AI:* it manufactures a debate with a view nobody stated, in order to sound insightful. It is the single most persistent tell in 2025–2026 studies (it appeared in about 6% of ChatGPT replies in mid-2025 and nearly tripled on the web since 2023).
+- *Why it reads as AI:* it manufactures a debate with a view nobody stated, in order to sound insightful. Pew Research Center counted "it's not just X, it's Y" at 0.87 per 10,000 words of web text in January 2023 and 2.36 in January 2026: still rare, but the fastest growth of the four tells Pew tracked. The Washington Post found versions of "not just X, but Y" in 6% of a sample of public GPT-4o chats from July 2025.
 - *Exception:* the reader really does hold the rejected view, and saying so helps them. At most once per piece.
 - *Fix:* state the positive claim and support it.
   - Before: *It's not just a calendar. It's a whole new way to own your time.*
@@ -49,7 +49,7 @@ Use this in the editing passes, after a draft exists. Don't read it as a list of
 
 ### "-ing" significance tails: **Rewrite**
 "…, ensuring a smooth experience." "…, highlighting our commitment to quality." "…, making it easier than ever to…" "…, fostering collaboration."
-- *Why:* a cheap way to attach an evaluation to a fact. Measured at about 5× the human rate in instruction-tuned models.
+- *Why:* a cheap way to attach an evaluation to a fact. In Reinhart et al. (PNAS 2025), four instruction-tuned models used present participial clauses at 2–5× the human rate, GPT-4o at 5.3×. The study counted all such clauses, these tails among them.
 - *Fix:* cut the tail. If it held a real consequence, give that its own sentence with a concrete subject.
   - Before: *We added offline mode, ensuring you stay productive wherever you are.*
   - After: *Offline mode keeps your last 30 days of notes on the phone. Edits sync when you're back online.*
@@ -80,7 +80,7 @@ Use this in the editing passes, after a draft exists. Don't read it as a list of
 
 ### Decorative lists of three: **Cap** (one per section)
 "Fast, simple, and secure." "For teams, for creators, and for enterprises." Three bullets under every heading.
-- *Why:* triads sound complete, so models reach for them whether or not there are three things. Measured at about 4× the human rate.
+- *Why:* triads sound complete, so models reach for them whether or not there are three things. Pangram, which sells an AI detector, counts about 4× the human rate in its own data: 19 lists of three per 10,000 words of AI text against 5 in human writing.
 - *What the cap is for:* decorative triads such as adjective trios, slogan trios and benefit trios. A list of three genuinely different things (three services, three steps, three plans, three features the brief names) is just a list: write it as one, in one sentence if it reads naturally.
 - *Don't dodge the cap by splitting.* Breaking a real list into separate sentences ("We map your stakeholders. Then we build your strategy. Then we support…") swaps one tic for another.
 - *Fix:* make each list its natural length, and drop items that are synonyms of each other ("simple, easy and intuitive" is one item).
@@ -88,7 +88,7 @@ Use this in the editing passes, after a draft exists. Don't read it as a list of
   - After: *Pages render in 80 ms on a mid-range phone.*
 
 ### Em dashes: **Cap**
-- *Why it matters for this skill:* in a 2026 comparison of major models, only Claude still used more em dashes than professional writers. Vendor data puts Claude at roughly 7× the human rate.
+- *Why it matters for this skill:* when The Economist compared four chatbots with human journalism and novels in July 2026, only Claude still used more em dashes than the human writers. Pangram's undated vendor data puts OpenAI's models above Anthropic's: 45 em dashes per 10,000 words against 32, with 5 in human text.
 - *Limits:*
   - None in very short copy (headlines, subject lines, ads, buttons).
   - In body copy, about one per 300–500 words, and never as the default way to set up a punchline ("It's fast — really fast.").
@@ -113,14 +113,14 @@ Sentences opening with Additionally, Moreover, Furthermore, Notably, Importantly
 - *Fix:* delete the transition. If the paragraph no longer follows, reorder the content instead of gluing it.
 
 ### "And"-chained sentences with light punctuation: **Watch**
-Long sentences joined by "and…and…and", with no semicolons, parentheses or quoted voices. A 2026 study found this is now one of the clearer signs as models shed dashes.
+Long sentences joined by "and…and…and", with no semicolons, parentheses or quoted voices. The Economist's July 2026 comparison found this is now one of the clearer signs as models shed dashes.
 - *Fix:* split by meaning. Let a real aside go in parentheses. Quote a real customer where you have one.
 
 ## 3. Rhythm and shape
 
 ### Flat sentence length: **Rewrite** when a whole paragraph is flat
 Every sentence lands at 14–22 words with the same subject–verb–object shape. Read aloud, it drones.
-- *Why prompting doesn't fix it:* telling a model to vary rhythm moves it unpredictably, and examples of human rhythm can make it flatter (NeurIPS 2026). So measure after drafting: `check_copy.py` reports length spread per paragraph.
+- *Why prompting doesn't fix it:* in a NeurIPS 2026 workshop poster (Lanzo & Angelo), the same instruction to vary rhythm moved nine model families unpredictably, and few-shot examples of human writing gave the flattest text of five prompting modes in seven of the nine. So measure after drafting: `check_copy.py` reports length spread per paragraph.
 - *Fix:* restructure by meaning, not by alternation.
   - Give the key fact its own short sentence.
   - Let the mechanism or story run long.
@@ -196,7 +196,7 @@ These words are fine in the right sentence. They're a problem when they replace 
 
 ## 9. Second-generation tells and overcorrection
 
-Removing first-order tells tends to produce new ones. In one public test of a popular humanizer, its rewrites cut listed AI words from 70 to 0, while uniform sentence rhythm rose from 60 to 101 and aphoristic closers from 38 to 61. After any rewrite, check for:
+Removing first-order tells tends to produce new ones. In one unreviewed test of a popular humanizer, language-model judges flagged AI vocabulary 70 times in the original texts and 0 times in its rewrites. But their flags for a uniform beat rose from 60 to 101, and for aphoristic closers from 38 to 61. After any rewrite, check for:
 
 - **Staccato bursts**: choppy fragments replacing every long sentence ("broetry").
 - **Wisdom-shaped closers**: an epigram ending each paragraph.
@@ -222,7 +222,7 @@ Over-correcting makes copy worse and flattens real voices.
 | Lists for list-shaped content | Specs, steps and plan comparisons belong in lists |
 | Formal vocabulary in general; British or American spelling; contractions or their absence | Style and register choices |
 | Non-native patterns (formal register, synonym variety) | Taught in many school systems; don't treat a person's English as a tell |
-| The word "delve" | Already rare in current models; its absence proves nothing |
+| The word "delve" | Fell sharply in ChatGPT by mid-2025; its absence proves nothing |
 | An AI-detector score | Error-prone, model-specific, and biased against plain and non-native writing. Never the goal |
 
 ## 11. Other languages
@@ -250,22 +250,25 @@ Over-correcting makes copy worse and flattens real voices.
 ## 12. Sources and credits
 
 Evidence for the patterns and rates above:
-- Kobak et al., "Delving into LLM-assisted writing in biomedical publications through excess vocabulary", *Science Advances* 2025 (https://arxiv.org/abs/2406.07016).
+- Kobak et al., "Delving into LLM-assisted writing in biomedical publications through excess vocabulary", *Science Advances* 2025 (https://arxiv.org/abs/2406.07016): an estimate from excess vocabulary that at least 13.5% of 2024 PubMed abstracts were processed with a language model.
 - Reinhart et al., "Do LLMs write like humans?", *PNAS* 2025 (https://arxiv.org/abs/2410.16107): participial clauses and nominalizations.
-- Liang et al., 2024 (https://arxiv.org/abs/2404.01268).
+- Liang et al., 2024 (https://arxiv.org/abs/2404.01268): the share of LLM-modified text in scientific papers.
 - Juzek & Ward, COLING 2025 (https://arxiv.org/abs/2412.11385).
 - Russell, Karpinska & Iyyer, ACL 2025 (https://arxiv.org/abs/2501.15654): what expert readers notice.
-- Lanzo & Angelo, "Burstiness Was Measured Wrong, and Prompting Cannot Aim It", NeurIPS 2026 (https://neurips.cc/virtual/2026/164820).
+- Lanzo & Angelo, "Burstiness Was Measured Wrong, and Prompting Cannot Aim It", poster at the NeurIPS 2026 workshop "Linguistic Principles for Foundation Models" (https://neurips.cc/virtual/2026/164820).
 - Paech et al., "Antislop", 2025 (https://arxiv.org/abs/2510.15061).
 - Pew Research Center, "How Much of the Internet Is Written With AI?", 2026-08-20 (https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/).
-- The Washington Post's analysis of ChatGPT messages, Nov 2025.
-- The Economist's 2026 punctuation study.
-- Pangram, "Signs of AI writing" (https://www.pangram.com/signs-of-ai-writing).
+- The Washington Post, analysis of public ChatGPT (GPT-4o) conversations, 2025-11-13 (https://www.washingtonpost.com/technology/interactive/2025/how-detect-chatgpt-em-dash/, paywalled; syndicated copy: https://www.yahoo.com/news/articles/clues-chatgpt-wrote-something-analyzed-214947550.html).
+- The Economist, comparison of four chatbots with human journalism and novels, 2026-07-30 (https://www.economist.com/culture/2026/07/30/how-to-spot-ai-writing, paywalled; open excerpt: https://daringfireball.net/linked/2026/08/11/economist-ai-writing).
+- Pangram, "9 Signs of AI Writing, Backed by Data" (https://www.pangram.com/signs-of-ai-writing): a detector maker's own undated data.
+- Geng & Trotta, ACL Findings 2025 (https://aclanthology.org/2025.findings-acl.657/): "delve" in arXiv abstracts fell after early 2024.
+- Liang et al., "GPT detectors are biased against non-native English writers", *Patterns* 2023 (https://doi.org/10.1016/j.patter.2023.100779): measured on seven 2023 detectors.
+- itsryanlenk's test of blader/humanizer, issue 229, 2026-08-19 (https://github.com/blader/humanizer/issues/229): language-model judges, unreviewed.
 
 Field guides and skills whose ideas are adapted here, in our own words:
 - Wikipedia, "Signs of AI writing", WikiProject AI Cleanup, CC BY-SA 4.0 (https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing): taxonomy, caveats, ineffective indicators.
 - coreyhaines31/marketingskills, MIT (https://github.com/coreyhaines31/marketingskills): rewrite-vs-cap severity, second-generation tells, `[NEED: …]` placeholders, the swap test.
-- blader/humanizer, MIT (https://github.com/blader/humanizer): grouping tells by cause, voice samples overriding rules, the humanizer test cited in section 9.
+- blader/humanizer, MIT (https://github.com/blader/humanizer): grouping tells by cause, voice samples overriding rules.
 - conorbronsdon/avoid-ai-writing, MIT (https://github.com/conorbronsdon/avoid-ai-writing): density over presence, explicit exceptions.
 - petergyang/no-ai-slop, MIT (https://github.com/petergyang/no-ai-slop): minimum effective edit, "the writer would recognize it".
 - manavmishra/ZeroSlop, MIT (https://github.com/manavmishra/ZeroSlop): overcorrection catalog.
