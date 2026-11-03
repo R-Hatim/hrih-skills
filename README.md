@@ -4,6 +4,8 @@ A collection of [Agent Skills](https://agentskills.io): folders of instructions 
 
 How the skills work, with before/after examples and a detector benchmark: **[hrih.si/projects/hrih-skills](https://hrih.si/projects/hrih-skills/)**.
 
+To try the copywriter's checks without installing anything, paste a draft into the **[AI tells checker](https://hrih.si/tools/ai-tells/)**: it runs the skill's linter in your browser and links each finding to its section of **[Signs of AI writing](https://hrih.si/articles/signs-of-ai-writing/)**.
+
 ## Skills
 
 | Skill | What it does | Needs |
